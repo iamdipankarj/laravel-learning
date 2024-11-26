@@ -13,7 +13,7 @@ Route::view('/', 'home');
 //  Route::get('/jobs', 'index');
 //
 //  // Create
-//  Route::get('/jobs/create', 'create');
+//  Route::get('/jobs/create', 'create');g
 //
 //  // Show
 //  Route::get('/jobs/{job}', 'show');
