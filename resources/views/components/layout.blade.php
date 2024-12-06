@@ -23,6 +23,16 @@
         <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
         <x-nav-link href="/jobs/create" :active="request()->is('jobs/create')">Create Job</x-nav-link>
         <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+        @guest
+          <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
+          <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
+        @endguest
+        @auth
+          <form method="POST" action="/logout" class="inline-flex">
+            @csrf
+            <button>Log Out</button>
+          </form>
+        @endauth
       </nav>
     </header>
     @if (isset($heading))

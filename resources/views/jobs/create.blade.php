@@ -1,16 +1,6 @@
 <x-layout>
   <x-slot:heading>Create Job</x-slot:heading>
 
-{{--  <div>--}}
-{{--    @if($errors->any())--}}
-{{--      <ul>--}}
-{{--        @foreach($errors->all() as $error)--}}
-{{--          <li class="text-red-500 italic">{{ $error }}</li>--}}
-{{--        @endforeach--}}
-{{--      </ul>--}}
-{{--    @endif--}}
-{{--  </div>--}}
-
   <form method="POST" action="/jobs">
     <div class="space-y-4">
       @csrf
